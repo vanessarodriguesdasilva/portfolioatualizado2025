@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="matematica.css">
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+    <title>Matemática</title>
+</head>
+<body>
+    <div class="header-container-matematica">
+        <div class="header-background-matematica">
+          <img src="fotos/matemática.gif" alt="Gif Matemática" class="header-gif-matematica">
+        </div>
+        <div class="header-matematica">
+          <h1 class="header-menu-matematica">Matemática</h1>
+        </div>
+    </div>
+    
+    <div class="titulo-secao">
+        <h2>1° Trimestre</h2>
+    </div>
+
+    <div class="fundo-carta">
+        <div class="bloco-atividade">
+            <div class="atividade-card">
+                <img src="fotos/jogomtm.png" alt="foto-jogo-mtm" class="foto-jogo">
+                <div class="botoes-alinhados">
+                    <button class="icone-modal" onclick="abrirModal('modal1')">☰</button>
+                    <a href="https://acesse.one/L0ovr"
+                    target="_blank" class="botao-criando">
+                    Criando Jogo</a>
+                </div>
+            </div>
+
+            <div class="atividade-card">
+                <img src="fotos/filme.png" alt="foto-filme-mtm" class="foto-filme">
+                <div class="botoes-alinhados">
+                    <button class="icone-modal" onclick="abrirModal('modal2')">☰</button>
+                    <a href="https://l1nk.dev/E4Dif" target="_blank" class="botao-atividade-filme">
+                        Filme</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="titulo-secao-2tri">
+        <h2>2° Trimestre</h2>
+    </div>
+
+    <div class="fundo-carta">
+      <div class="bloco-atividade-2tri">
+          <div class="atividade-card-2tri">
+              <img src="fotos/passemtm.png" alt="Foto desempenho PASSE" class="foto-passe-2tri">
+              <div class="botoes-alinhados">
+                  <button class="icone-modal" onclick="abrirModal('modal3')">☰</button>
+                  <a href="fotos/nivelmtm.png" target="_blank" class="botao-PASSE">Desempenho PASSE</a>
+              </div>
+          </div>
+
+          <div class="atividade-card">
+              <img src="fotos/formulariomtm.png" alt="Print apresentação formulário" class="foto-form2tri">
+              <div class="botoes-alinhados">
+                  <button class="icone-modal" onclick="abrirModal('modal4')">☰</button>
+                  <a href="https://encurtador.com.br/8KUe3" target="_blank" class="botao-formulario2tri">Apresentação</a>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    <div id="modal1" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal('modal1')">&times;</span>
+            <h2>Criando um Jogo</h2>
+            <p><strong>Habilidades desenvolvidas:</strong> H30 e H31.</p>
+            <p><strong>Objetivo da atividade:</strong>Desenvolver um jogo original ou atividades gamificadas utilizando os conceitos de análise combinatória e teoria das probabilidades, inspirado no filme Quebrando a Banca.</p>
+            <p><strong>Assunto:</strong> Probabilidade.</p>
+            <p><strong>Crítica pessoal:</strong> Atividade divertida e com um propósito legal e diferente.</p>
+        </div>
+    </div>
+    
+    <div id="modal2" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal('modal2')">&times;</span>
+            <h2>Filme - Quebrando a banca</h2>
+            <p><strong>Habilidades desenvolvidas:</strong> H31 e H32.</p>
+            <p><strong>Objetivo da atividade:</strong> Responder um questionário sobre o filme “Quebrando a banca”.</p>
+            <p><strong>Assunto:</strong> Probabilidade.</p>
+            <p><strong>Crítica pessoal:</strong> Achei o filme legal, porém acho que a atividade poderia ser melhor e mais criativa.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal('modal3')">&times;</span>
+            <h2>Desempenho PASSE</h2>
+            <p><strong>Habilidades desenvolvidas:</strong> H27, H28 e H29.</p>
+            <p><strong>Objetivo da atividade:</strong> Avaliar o quanto o aluno sabe dos assuntos tratados na matéria.</p>
+            <p><strong>Assunto:</strong> Matemática e suas tecnologias.</p>
+            <p><strong>Crítica pessoal:</strong> Deveria ter me esforçado mais nesta prova, achei que não valia nota e fiz a prova usando só a parte lógica.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal('modal4')">&times;</span>
+            <h2>Apresentação</h2>
+            <p><strong>Habilidades desenvolvidas:</strong> H27, H28 e H29.</p>
+            <p><strong>Objetivo da atividade:</strong> Criar um formulário, fazer as perguntas  e disponibilizá lo para as pessoas responderem, 
+            logo após isso nós tínhamos que avaliar o gráfico das respostas enviadas e falar qual a média, moda e mediana delas.</p>
+            <p><strong>Assunto:</strong> Estatística.</p>
+            <p><strong>Crítica pessoal:</strong> Poderia ter melhorado as perguntas do fomulário.</p>
+        </div>
+    </div>
+
+    <div class="botao-voltar">
+        <a href="index.html">Voltar</a>
+    </div>
+    
+    <script src="matematica.js"></script>
+</body>
+</html>

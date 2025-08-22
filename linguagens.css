@@ -1,0 +1,234 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #462028;
+    color: #faebcc;
+    margin: 0;
+}
+
+.header-container-linguagens {
+    position: relative;
+    min-height: 400px;
+}
+
+.header-background-linguagens img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    opacity: 0.55;
+}
+
+.header-linguagens {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    z-index: 2;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.header-linguagens Menu {
+    font-family: 'Smooch', cursive;
+    font-size: 120px;
+    margin: 0;
+    padding-left: 20px;
+    margin-top: 100px;
+}
+
+/* Estilos da seção de atividades */
+.titulo-secao h2,
+.titulo-secao-2tri h2 {
+    margin-left: 40px;
+    font-family: 'B612', sans-serif;
+}
+
+.fundo-carta {
+    margin-top: -5px;
+    position: relative;
+    background-image: url("fotos/fundo.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+.fundo-carta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Estilos dos blocos de atividade */
+.bloco-atividade {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+}
+
+/* Estilos dos cartões de atividade */
+.atividade-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilos das imagens específicas */
+.foto-pai-contra-mae,
+.foto-biografia,
+.foto-revista-literaria,
+.foto-repertorio,
+.foto-redacao,
+.foto-padlet,
+.foto-que-tipo-de-arte {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border: 10px solid #462028;
+    display: block;
+    margin: 0;
+}
+
+/* Estilos dos botões de atividade */
+.botoes-alinhados {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone-modal {
+    background: none;
+    border: none;
+    color: #faebcc;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.botao-pai-contra-mae,
+.botao-revista-literaria,
+.botao-biografia,
+.botao-repertorio,
+.botao-redacao,
+.botao-padlet,
+.botao-tipos-de-arte {
+    background-color: #462028;
+    color: #faebcc;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border: none;
+    font-family: 'Arial', sans-serif;
+}
+
+.botao-padlet::before,
+.botao-redacao::before,
+.botao-repertorio::before,
+.botao-biografia::before,
+.botao-revista-literaria::before,
+.botao-pai-contra-mae::before,
+.botao-tipos-de-arte::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -65%;
+    width: 50%;
+    height: 100%;
+    background: #faebcc;
+    transform: skewX(-25deg);
+}
+
+.botao-padlet:hover::before,
+.botao-redacao:hover::before,
+.botao-repertorio:hover::before,
+.botao-biografia:hover::before,
+.botao-revista-literaria:hover::before,
+.botao-pai-contra-mae:hover::before,
+.botao-tipos-de-arte:hover::before {
+    left: 125%;
+    transition: left 0.5s;
+}
+
+/* Estilo do botão de voltar */
+.botao-voltar {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.botao-voltar a {
+    background-color: #faebcc;
+    color: #462028;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border: none;
+}
+
+.botao-voltar a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -65%;
+    width: 50%;
+    height: 100%;
+    background: #462028;
+    transform: skewX(-25deg);
+}
+
+.botao-voltar a:hover::before {
+    left: 125%;
+    transition: left 0.5s;
+}
+
+/* Estilos dos modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background-color: #462028;
+    color: #faebcc;
+    padding: 20px;
+    border: 1px solid #faebcc;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fechar {
+    color: #faebcc;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: #925a38;
+    text-decoration: none;
+    cursor: pointer;
+}
