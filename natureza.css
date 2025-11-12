@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #462028;
+    background-color: rgba(62, 57, 25, 1);
     color: #faebcc;
     margin: 0;
 }
@@ -90,7 +90,7 @@ body {
     width: 400px;
     height: 250px;
     object-fit: cover;
-    border: 10px solid #462028;
+    border: 10px solid rgba(62, 57, 25, 1);
     display: block;
     margin: 0;
 }
@@ -119,7 +119,7 @@ body {
 .botao-vacinas,
 .glossario,
 .saude-coletiva {
-    background-color: #462028;
+    background-color: rgba(62, 57, 25, 1);
     color: #faebcc;
     padding: 10px 20px;
     text-decoration: none;
@@ -169,7 +169,7 @@ body {
 
 .botao-voltar a {
     background-color: #faebcc;
-    color: #462028;
+    color: rgba(62, 57, 25, 1);
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -186,7 +186,7 @@ body {
     left: -65%;
     width: 50%;
     height: 100%;
-    background: #462028;
+    background: rgba(62, 57, 25, 1);
     transform: skewX(-25deg);
 }
 
@@ -210,7 +210,7 @@ body {
 }
 
 .modal-conteudo {
-    background-color: #462028;
+    background-color: rgba(62, 57, 25, 1);
     color: #faebcc;
     padding: 20px;
     border: 1px solid #faebcc;

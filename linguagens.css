@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #462028;
+    background-color: rgba(75, 21, 53, 1);
     color: #faebcc;
     margin: 0;
 }
@@ -89,7 +89,7 @@ body {
     width: 300px;
     height: 150px;
     object-fit: cover;
-    border: 10px solid #462028;
+    border: 10px solid rgba(75, 21, 53, 1);
     display: block;
     margin: 0;
 }
@@ -118,7 +118,7 @@ body {
 .botao-redacao,
 .botao-padlet,
 .botao-tipos-de-arte {
-    background-color: #462028;
+    background-color: rgba(75, 21, 53, 1);
     color: #faebcc;
     padding: 10px 20px;
     text-decoration: none;
@@ -168,7 +168,7 @@ body {
 
 .botao-voltar a {
     background-color: #faebcc;
-    color: #462028;
+    color: rgba(75, 21, 53, 1);
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -185,13 +185,13 @@ body {
     left: -65%;
     width: 50%;
     height: 100%;
-    background: #462028;
+    background: rgba(75, 21, 53, 1);
     transform: skewX(-25deg);
 }
 
 .botao-voltar a:hover::before {
     left: 125%;
-    transition: left 0.5s;
+    transition: left 0.4s;
 }
 
 /* Estilos dos modais */
@@ -209,7 +209,7 @@ body {
 }
 
 .modal-conteudo {
-    background-color: #462028;
+    background-color: rgba(75, 21, 53, 1);
     color: #faebcc;
     padding: 20px;
     border: 1px solid #faebcc;

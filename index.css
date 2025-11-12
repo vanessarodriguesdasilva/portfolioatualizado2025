@@ -131,7 +131,14 @@ h2 {
   object-fit: cover;
   border: 10px solid #462028;
   display: block;
-  margin: 0; 
+  margin: 0;
+  transition: 0.3s;
+}
+
+.foto-portfolio-1ano img:hover,
+.foto-portfolio-2ano img:hover{
+  transform:scale(1.1, 1.1);
+  cursor: pointer;
 }
 
 .botao-1anoportfas,

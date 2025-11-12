@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #462028;
+    background-color: rgba(75, 52, 29, 1);
     color: #faebcc;
     margin: 0;
 }
@@ -90,10 +90,22 @@ body {
     width: 400px;
     height: 250px;
     object-fit: cover;
-    border: 10px solid #462028;
+    border: 10px solid rgba(75, 52, 29, 1);
     display: block;
     margin: 0;
+    transition: 0.3s;
 }
+
+.foto-guerra-do-opio:hover,
+.foto-quiz:hover,
+.foto-geopolitica:hover,
+.foto-2guerra-mundial:hover,
+.foto-totalitarismo:hover,
+.foto-republica:hover{
+    transform:scale(1.1, 1.1);
+    cursor: pointer;
+}
+
 
 /* Estilos dos botões de atividade */
 .botoes-alinhados {
@@ -118,7 +130,7 @@ body {
 .botao-2guerra,
 .botao-totalitarismo,
 .botao-republica {
-    background-color: #462028;
+    background-color: rgba(75, 52, 29, 1);
     color: #faebcc;
     padding: 10px 20px;
     text-decoration: none;
@@ -166,7 +178,7 @@ body {
 
 .botao-voltar a {
     background-color: #faebcc;
-    color: #462028;
+    color: rgba(75, 52, 29, 1);
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -183,7 +195,7 @@ body {
     left: -65%;
     width: 50%;
     height: 100%;
-    background: #462028;
+    background: rgba(75, 52, 29, 1);
     transform: skewX(-25deg);
 }
 
@@ -207,7 +219,7 @@ body {
 }
 
 .modal-conteudo {
-    background-color: #462028;
+    background-color: rgba(75, 52, 29, 1);
     color: #faebcc;
     padding: 20px;
     border: 1px solid #faebcc;
