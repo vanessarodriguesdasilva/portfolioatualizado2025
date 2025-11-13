@@ -43,7 +43,7 @@ body {
     padding: 10px 20px;
     background-color: #faebcc;
     border-left: 5px solid #faebcc;
-    font-size: 14px;
+    font-size: 17px;
     font-family: 'B612', sans-serif;
     color: #343625;
     border: 10px solid #462028;
@@ -62,7 +62,7 @@ body {
 .fundo-carta {
     margin-top: -5px;
     position: relative;
-    background-image: url(fotos/fundo.jpeg);
+    background-image: url(fotos/fundoinicio.png);
     background-size: cover;
     background-position: center;
     padding: 30px;

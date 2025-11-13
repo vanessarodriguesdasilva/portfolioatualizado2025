@@ -36,7 +36,8 @@ body {
 }
 
 .titulo-secao h2,
-.titulo-secao-2tri h2 {
+.titulo-secao-2tri h2,
+.titulo-secao-3tri h2 {
     margin-left: 40px;
     font-family: 'B612', sans-serif;
 }
@@ -44,7 +45,7 @@ body {
 .fundo-carta {
     margin-top: -5px;
     position: relative;
-    background-image: url("fotos/fundo.jpeg");
+    background-image: url("fotos/fundomatematica.png");
     background-size: cover;
     background-position: center;
     padding: 30px;
@@ -62,7 +63,8 @@ body {
 
 /* Estilos dos blocos de atividade (1º e 2º Trimestre) */
 .bloco-atividade,
-.bloco-atividade-2tri {
+.bloco-atividade-2tri, 
+.bloco-atividade-3tri {
     position: relative;
     z-index: 1;
     display: flex;
@@ -74,7 +76,8 @@ body {
 
 /* Estilos dos cartões de atividade (1º e 2º Trimestre) */
 .atividade-card,
-.atividade-card-2tri {
+.atividade-card-2tri,
+.atividade-card-3tri {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,7 +88,8 @@ body {
 .foto-jogo,
 .foto-filme,
 .foto-passe-2tri,
-.foto-form2tri {
+.foto-form2tri, 
+.foto-BOLOMTM{
     width: 400px;
     height: 250px;
     object-fit: cover;
@@ -98,7 +102,8 @@ body {
 .foto-jogo:hover,
 .foto-filme:hover,
 .foto-passe-2tri:hover,
-.foto-form2tri:hover{
+.foto-form2tri:hover,
+.foto-BOLOMTM:hover {
     transform:scale(1.1, 1.1);
     cursor: pointer;
 }
@@ -123,7 +128,8 @@ body {
 .botao-criando,
 .botao-atividade-filme,
 .botao-PASSE,
-.botao-formulario2tri {
+.botao-formulario2tri,
+.botao-BOLOMTM {
     background-color: rgba(36, 51, 76, 1);
     color: #faebcc;
     padding: 10px 20px;
@@ -139,7 +145,8 @@ body {
 .botao-criando::before,
 .botao-atividade-filme::before,
 .botao-PASSE::before,
-.botao-formulario2tri::before {
+.botao-formulario2tri::before,
+.botao-BOLOMTM::before {
     content: "";
     position: absolute;
     top: 0;
@@ -153,7 +160,8 @@ body {
 .botao-criando:hover::before,
 .botao-atividade-filme:hover::before,
 .botao-PASSE:hover::before,
-.botao-formulario2tri:hover::before {
+.botao-formulario2tri:hover::before,
+.botao-BOLOMTM:hover::before{
     left: 125%;
     transition: left 0.5s;
 }
