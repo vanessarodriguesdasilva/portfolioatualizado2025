@@ -37,7 +37,8 @@ body {
 
 /* Estilos da seção de atividades */
 .titulo-secao h2,
-.titulo-secao-2tri h2 {
+.titulo-secao-2tri h2,
+.titulo-secao-3tri h2 {
     margin-left: 40px;
     font-family: 'B612', sans-serif;
 }
@@ -72,12 +73,11 @@ body {
 }
 
 /* Estilos dos cartões de atividade */
-.atividade-card,
-.atividade-card-2tri {
+.atividade-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 17px;
 }
 
 /* Estilos das imagens específicas de Humanas */
@@ -86,7 +86,10 @@ body {
 .foto-geopolitica,
 .foto-2guerra-mundial,
 .foto-totalitarismo,
-.foto-republica {
+.foto-republica,
+.foto-capital,
+.foto-getulio,
+.foto-21anos {
     width: 400px;
     height: 250px;
     object-fit: cover;
@@ -101,7 +104,10 @@ body {
 .foto-geopolitica:hover,
 .foto-2guerra-mundial:hover,
 .foto-totalitarismo:hover,
-.foto-republica:hover{
+.foto-republica:hover,
+.foto-capital:hover,
+.foto-getulio:hover,
+.foto-21anos:hover {
     transform:scale(1.1, 1.1);
     cursor: pointer;
 }
@@ -129,7 +135,10 @@ body {
 .botao-geopolitica,
 .botao-2guerra,
 .botao-totalitarismo,
-.botao-republica {
+.botao-republica,
+.botao-capital,
+.botao-getulio,
+.botao-21anos {
     background-color: rgba(75, 52, 29, 1);
     color: #faebcc;
     padding: 10px 20px;
@@ -147,7 +156,10 @@ body {
 .botao-geopolitica::before,
 .botao-2guerra::before,
 .botao-totalitarismo::before,
-.botao-republica::before {
+.botao-republica::before,
+.botao-capital::before,
+.botao-getulio::before,
+.botao-21anos::before {
     content: "";
     position: absolute;
     top: 0;
@@ -163,7 +175,10 @@ body {
 .botao-geopolitica:hover::before,
 .botao-2guerra:hover::before,
 .botao-totalitarismo:hover::before,
-.botao-republica:hover::before {
+.botao-republica:hover::before,
+.botao-capital:hover::before,
+.botao-getulio:hover::before,
+.botao-21anos:hover::before {
     left: 125%;
     transition: left 0.5s;
 }

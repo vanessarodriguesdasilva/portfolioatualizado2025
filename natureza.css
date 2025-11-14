@@ -38,7 +38,8 @@ body {
 
 /* Estilos da seção de atividades */
 .titulo-secao h2,
-.titulo-secao-2tri h2 {
+.titulo-secao-2tri h2,
+.titulo-secao-3tri h2 {
     margin-left: 40px;
     font-family: 'B612', sans-serif;
 }
@@ -86,7 +87,10 @@ body {
 .foto-biomoleculas,
 .foto-vacinas,
 .foto-glosssario,
-.foto-saude-coletiva {
+.foto-saude-coletiva,
+.foto-anaenergia,
+.foto-oleos,
+.foto-padletnat {
     width: 400px;
     height: 250px;
     object-fit: cover;
@@ -118,7 +122,10 @@ body {
 .atividade-de-escolha,
 .botao-vacinas,
 .glossario,
-.saude-coletiva {
+.saude-coletiva,
+.botao-anaenergia,
+.extracaodeoleos,
+.padlet-natureza {
     background-color: rgba(62, 57, 25, 1);
     color: #faebcc;
     padding: 10px 20px;
@@ -137,7 +144,10 @@ body {
 .atividade-de-escolha::before,
 .botao-vacinas::before,
 .glossario::before,
-.saude-coletiva::before {
+.saude-coletiva::before,
+.botao-anaenergia::before,
+.extracaodeoleos::before,
+.padlet-natureza::before {
     content: "";
     position: absolute;
     top: 0;
@@ -154,7 +164,10 @@ body {
 .atividade-de-escolha:hover::before,
 .botao-vacinas:hover::before,
 .glossario:hover::before,
-.saude-coletiva:hover::before {
+.saude-coletiva:hover::before,
+.botao-anaenergia:hover::before,
+.extracaodeoleos:hover::before
+.padlet-natureza:hover::before {
     left: 125%;
     transition: left 0.5s;
 }
