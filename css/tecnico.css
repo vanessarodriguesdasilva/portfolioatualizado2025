@@ -5,13 +5,10 @@ body {
     margin: 0;
 }
 
-/* ========================= HEADER TÉCNICO ========================= */
-
 .header-container-tecnico {
     position: relative;
     min-height: 400px;
     overflow: hidden;
-    /* necessário para esconder o blur */
 }
 
 .header-background-tecnico {
@@ -26,7 +23,6 @@ body {
     display: block;
 }
 
-/* --- AQUI ESTÁ O EFEITO GRADIENTE + BLUR --- */
 .header-background-tecnico::after {
     content: "";
     position: absolute;
@@ -63,8 +59,6 @@ body {
     margin-top: 100px;
 }
 
-/* ========================= SEÇÕES ========================= */
-
 .titulo-secao h2,
 .titulo-secao-2tri h2 {
     margin-left: 40px;
@@ -88,8 +82,6 @@ body {
     z-index: 0;
 }
 
-/* ========================= ATIVIDADES ========================= */
-
 .bloco-atividade {
     position: relative;
     z-index: 1;
@@ -104,7 +96,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 17px;
 }
 
 /* imagens */
@@ -118,9 +110,17 @@ body {
     border: 10px solid rgba(57, 31, 18, 1);
     display: block;
     margin: 0;
+    transition: 0.3s;
 }
 
-/* ========================= BOTÕES ========================= */
+.foto-sa:hover,
+.foto-planilha:hover,
+.foto-exercicio:hover,
+.foto-figma-sa:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 .botoes-alinhados {
     display: flex;

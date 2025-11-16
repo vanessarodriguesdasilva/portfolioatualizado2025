@@ -132,17 +132,31 @@ h2 {
 /* Imagens */
 .foto-curriculo1,
 .foto-curriculo2,
-.foto-certificado {
-  width: 400px;
-  height: 250px;
+.foto-certificado,
+.foto-certificado2,
+.foto-certificado3 {
+  width: 300px;
+  height: 150px;
   object-fit: cover;
   border: 10px solid #462028;
   display: block;
   margin: 0;
+  transition: 0.3s;
+}
+
+.foto-curriculo1:hover,
+.foto-curriculo2:hover,
+.foto-certificado:hover,
+.foto-certificado2:hover,
+.foto-certificado3:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* Botões */
 .botao-certificado,
+.botao-certificado2,
+.botao-certificado3,
 .botao-curriculo2,
 .botao-curriculo1 {
   background-color: #462028;
@@ -158,6 +172,8 @@ h2 {
 }
 
 .botao-certificado::before,
+.botao-certificado2::before
+.botao-certificado3::before,
 .botao-curriculo1::before,
 .botao-curriculo2::before {
   content: "";
@@ -172,7 +188,9 @@ h2 {
 
 .botao-curriculo2:hover::before,
 .botao-curriculo1:hover::before,
-.botao-certificado:hover::before {
+.botao-certificado:hover::before,
+.botao-certificado2:hover::before,
+.botao-certificado3:hover::before {
   left: 125%;
   transition: left 0.5s;
 }
@@ -199,11 +217,11 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 17px;
 }
 
 /* Botão voltar */
-.botao-voltar {
+.botao-voltar{
   display: flex;
   justify-content: center;
   margin-top: 15px;
@@ -238,7 +256,6 @@ h2 {
   transition: left 0.5s;
 }
 
-/* ==================== NAVBAR ==================== */
 .nav {
   display: flex;
   justify-content: space-between;

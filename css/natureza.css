@@ -103,12 +103,11 @@ body {
   padding: 30px;
 }
 
-/* Estilos dos cartões de atividade */
 .atividade-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 17px;
 }
 
 /* Estilos das imagens específicas de Natureza */
@@ -128,9 +127,23 @@ body {
   border: 10px solid rgba(62, 57, 25, 1);
   display: block;
   margin: 0;
+  transition: 0.3s;
 }
 
-/* Estilos dos botões de atividade */
+.foto-mapa-mental:hover,
+.foto-poluicao:hover,
+.foto-estequimoetria:hover,
+.foto-biomoleculas:hover,
+.foto-vacinas:hover,
+.foto-glosssario:hover,
+.foto-saude-coletiva:hover,
+.foto-anaenergia:hover,
+.foto-oleos:hover,
+.foto-padletnat:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .botoes-alinhados {
   display: flex;
   align-items: center;
@@ -181,7 +194,6 @@ body {
 .padlet-natureza::before {
   content: "";
   position: absolute;
-  top: 0;
   left: -65%;
   width: 50%;
   height: 100%;
@@ -197,12 +209,12 @@ body {
 .glossario:hover::before,
 .saude-coletiva:hover::before,
 .botao-anaenergia:hover::before,
-.extracaodeoleos:hover::before .padlet-natureza:hover::before {
+.extracaodeoleos:hover::before,
+.padlet-natureza:hover::before {
   left: 125%;
   transition: left 0.5s;
 }
 
-/* Estilo do botão de voltar */
 .botao-voltar {
   display: flex;
   justify-content: center;
