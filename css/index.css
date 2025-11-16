@@ -1,0 +1,333 @@
+/* ==================== RESET E BASE ==================== */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #462028;
+  color: #faebcc;
+  margin: 0;
+  padding-top: 80px;
+  /* espaço para a navbar fixa */
+}
+
+.header-container {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+  /* importante para o blur */
+}
+
+/* FUNDO DO HEADER */
+.header-background {
+  position: relative;
+}
+
+.header-background img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* GRADIENTE + BLUR IGUAL AO DO OUTRO CSS */
+.header-background::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+
+  background: linear-gradient(to bottom,
+      rgba(70, 32, 40, 0) 0%,
+      rgba(70, 32, 40, 0.6) 60%,
+      rgba(70, 32, 40, 1) 100%);
+
+  filter: blur(8px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* TEXTO EM CIMA DO GIF */
+.header {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  z-index: 5;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  font-family: 'Smooch', cursive;
+  font-size: 120px;
+}
+
+/* ==================== APRESENTAÇÃO ==================== */
+.apresentacao-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.texto_apresentacao {
+  max-width: 700px;
+  padding: 10px 20px;
+  background-color: #faebcc;
+  font-size: 17px;
+  font-family: 'B612', sans-serif;
+  color: #343625;
+  border: 10px solid #462028;
+}
+
+.my-image {
+  width: 280px;
+  height: 350px;
+  border: 10px solid #462028;
+  margin-left: 25px;
+}
+
+/* ==================== FUNDOS ==================== */
+.fundo-carta {
+  margin-top: -5px;
+  position: relative;
+  background-image: url("../fotos/fundoinicio.png");
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fundo-carta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  pointer-events: none;
+}
+
+h2 {
+  margin-left: 40px;
+}
+
+/* ==================== PORTFÓLIOS ==================== */
+.portfolios-anteriores {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.foto-portfolio-1ano img,
+.foto-portfolio-2ano img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border: 10px solid #462028;
+  transition: 0.3s;
+}
+
+.foto-portfolio-1ano img:hover,
+.foto-portfolio-2ano img:hover {
+  transform: scale(1.1);
+}
+
+.botao-1anoportfas,
+.botao-2anoportfas {
+  background-color: #462028;
+  color: #faebcc;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.botao-1anoportfas::before,
+.botao-2anoportfas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -65%;
+  width: 50%;
+  height: 100%;
+  background: #faebcc;
+  transform: skewX(-25deg);
+}
+
+.botao-1anoportfas:hover::before,
+.botao-2anoportfas:hover::before {
+  left: 125%;
+  transition: left 0.5s;
+}
+
+/* Responsivo portfólios */
+@media (max-width: 900px) {
+  .portfolios-anteriores {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .foto-portfolio-1ano img,
+  .foto-portfolio-2ano img {
+    width: 320px;
+    height: 200px;
+  }
+}
+
+.botao-materia {
+  background-color: #462028;
+  color: #faebcc;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.botao-materia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -65%;
+  width: 50%;
+  height: 100%;
+  background: #faebcc;
+  transform: skewX(-25deg);
+}
+
+.botao-materia:hover::before {
+  left: 125%;
+  transition: left 0.5s;
+}
+
+@media (max-width: 600px) {
+  .botao-materia {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ==================== NAVBAR ==================== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #462028;
+  color: #faebcc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #faebcc;
+  padding: 10px;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  padding-left: 18px;
+  border-radius: 5px;
+}
+
+/* ========== DROPDOWN ========== */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #462028;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+  z-index: 99999;
+}
+
+.dropdown:hover>.submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu li a {
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.submenu li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 30px;
+}
+
+/* ==================== RESPONSIVIDADE MENU ==================== */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 12px 15px;
+  }
+
+  .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: #333;
+  }
+}

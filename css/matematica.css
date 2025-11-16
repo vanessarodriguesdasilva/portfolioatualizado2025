@@ -1,0 +1,381 @@
+/* ==================== GERAL ==================== */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: rgba(36, 51, 76, 1);
+  color: #faebcc;
+  margin: 0;
+}
+
+/* ==================== HEADER MATEMÁTICA ==================== */
+.header-container-matematica {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+  /* necessário para esconder o fade */
+}
+
+.header-background-matematica {
+  position: relative;
+}
+
+/* Imagem / GIF do topo */
+.header-background-matematica img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  opacity: 0.55;
+  display: block;
+}
+
+/* ✨ GRADIENTE + BLUR PROFISSIONAL PARA TRANSIÇÃO SUAVE */
+.header-background-matematica::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+
+  background: linear-gradient(to bottom,
+      rgba(36, 51, 76, 0) 0%,
+      rgba(36, 51, 76, 0.6) 60%,
+      rgba(36, 51, 76, 1) 100%);
+
+  filter: blur(8px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Texto por cima da imagem */
+.header-matematica {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  z-index: 5;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.header-menu-matematica {
+  font-family: 'Smooch', cursive;
+  font-size: 120px;
+  margin: 0;
+  padding-left: 20px;
+  margin-top: 100px;
+}
+
+/* ==================== SEÇÕES ==================== */
+.titulo-secao h2,
+.titulo-secao-2tri h2,
+.titulo-secao-3tri h2 {
+  margin-left: 40px;
+  font-family: 'B612', sans-serif;
+}
+
+/* Fundo com imagem */
+.fundo-carta {
+  margin-top: -5px;
+  position: relative;
+  background-image: url("../fotos/fundomatematica.png");
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+
+.fundo-carta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* ==================== BLOCOS DE ATIVIDADES ==================== */
+.bloco-atividade,
+.bloco-atividade-2tri,
+.bloco-atividade-3tri {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px;
+}
+
+/* Cartões */
+.atividade-card,
+.atividade-card-2tri,
+.atividade-card-3tri {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Fotos */
+.foto-jogo,
+.foto-filme,
+.foto-passe-2tri,
+.foto-form2tri,
+.foto-BOLOMTM {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border: 10px solid rgba(36, 51, 76, 1);
+  display: block;
+  margin: 0;
+  transition: 0.3s;
+}
+
+.foto-jogo:hover,
+.foto-filme:hover,
+.foto-passe-2tri:hover,
+.foto-form2tri:hover,
+.foto-BOLOMTM:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* ==================== BOTÕES ==================== */
+.botoes-alinhados {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-modal {
+  background: none;
+  border: none;
+  color: #faebcc;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.botao-criando,
+.botao-atividade-filme,
+.botao-PASSE,
+.botao-formulario2tri,
+.botao-BOLOMTM {
+  background-color: rgba(36, 51, 76, 1);
+  color: #faebcc;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border: none;
+  font-family: 'Arial', sans-serif;
+}
+
+.botao-criando::before,
+.botao-atividade-filme::before,
+.botao-PASSE::before,
+.botao-formulario2tri::before,
+.botao-BOLOMTM::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -65%;
+  width: 50%;
+  height: 100%;
+  background: #faebcc;
+  transform: skewX(-25deg);
+}
+
+.botao-criando:hover::before,
+.botao-atividade-filme:hover::before,
+.botao-PASSE:hover::before,
+.botao-formulario2tri:hover::before,
+.botao-BOLOMTM:hover::before {
+  left: 125%;
+  transition: left 0.5s;
+}
+
+/* Botão voltar */
+.botao-voltar {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.botao-voltar a {
+  background-color: #faebcc;
+  color: rgba(36, 51, 76, 1);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border: none;
+}
+
+.botao-voltar a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -65%;
+  width: 50%;
+  height: 100%;
+  background: rgba(36, 51, 76, 1);
+  transform: skewX(-25deg);
+}
+
+.botao-voltar a:hover::before {
+  left: 125%;
+  transition: left 0.5s;
+}
+
+/* ==================== MODAIS ==================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background-color: rgba(36, 51, 76, 1);
+  color: #faebcc;
+  padding: 20px;
+  border: 1px solid #faebcc;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fechar {
+  color: #faebcc;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: #925a38;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ==================== NAVBAR ==================== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(36, 51, 76, 1);
+  color: #faebcc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #faebcc;
+  padding: 10px;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  padding-left: 18px;
+  border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(36, 51, 76, 1);
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+  z-index: 99999;
+}
+
+.dropdown:hover>.submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu li a {
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.submenu li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 30px;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 12px 15px;
+  }
+
+  .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: #333;
+  }
+}

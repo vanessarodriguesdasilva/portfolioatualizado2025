@@ -5,9 +5,15 @@ body {
     margin: 0;
 }
 
+/* ==================== HEADER LINGUAGENS ==================== */
 .header-container-linguagens {
     position: relative;
     min-height: 400px;
+    overflow: hidden; /* permite o fade com blur */
+}
+
+.header-background-linguagens {
+    position: relative; /* NECESSÁRIO para o ::after funcionar */
 }
 
 .header-background-linguagens img {
@@ -17,11 +23,32 @@ body {
     opacity: 0.55;
 }
 
+/* === GRADIENTE + BLUR aplicado === */
+.header-background-linguagens::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(75, 21, 53, 0) 0%,
+        rgba(75, 21, 53, 0.6) 60%,
+        rgba(75, 21, 53, 1) 100%
+    );
+
+    filter: blur(8px);
+    pointer-events: none;
+    z-index: 5;
+}
+
 .header-linguagens {
     position: absolute;
     top: 70%;
     left: 50%;
-    z-index: 2;
+    z-index: 6;
     width: 100%;
     transform: translate(-50%, -50%);
     text-align: left;
@@ -35,7 +62,7 @@ body {
     margin-top: 100px;
 }
 
-/* Estilos da seção de atividades */
+/* ==================== Seção de atividades ==================== */
 .titulo-secao h2,
 .titulo-secao-2tri h2 {
     margin-left: 40px;
@@ -45,7 +72,7 @@ body {
 .fundo-carta {
     margin-top: -5px;
     position: relative;
-    background-image: url("fotos/fundolinguagens.png");
+    background-image: url("../fotos/fundolinguagens.png");
     background-size: cover;
     background-position: center;
     padding: 30px;
@@ -59,7 +86,7 @@ body {
     z-index: 0;
 }
 
-/* Estilos dos blocos de atividade */
+/* ==================== Blocos de atividade ==================== */
 .bloco-atividade {
     position: relative;
     z-index: 1;
@@ -70,7 +97,6 @@ body {
     padding: 30px;
 }
 
-/* Estilos dos cartões de atividade */
 .atividade-card {
     display: flex;
     flex-direction: column;
@@ -78,7 +104,7 @@ body {
     gap: 10px;
 }
 
-/* Estilos das imagens específicas */
+/* Fotos */
 .foto-pai-contra-mae,
 .foto-biografia,
 .foto-revista-literaria,
@@ -94,7 +120,7 @@ body {
     margin: 0;
 }
 
-/* Estilos dos botões de atividade */
+/* Botões */
 .botoes-alinhados {
     display: flex;
     align-items: center;
@@ -111,6 +137,7 @@ body {
     line-height: 1;
 }
 
+/* Botões principais */
 .botao-pai-contra-mae,
 .botao-revista-literaria,
 .botao-biografia,
@@ -158,7 +185,7 @@ body {
     transition: left 0.5s;
 }
 
-/* Estilo do botão de voltar */
+/* ==================== Botão Voltar ==================== */
 .botao-voltar {
     display: flex;
     justify-content: center;
@@ -194,7 +221,7 @@ body {
     transition: left 0.4s;
 }
 
-/* Estilos dos modais */
+/* ==================== Modais ==================== */
 .modal {
     display: none;
     position: fixed;
@@ -231,4 +258,109 @@ body {
     color: #925a38;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* ==================== NAVBAR ==================== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(75, 21, 53, 1);
+  color: #faebcc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #faebcc;
+  padding: 10px;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255,255,255,0.15);
+  padding-left: 18px;
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(75, 21, 53, 1);
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 99999;
+}
+
+.dropdown:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu li a {
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.submenu li a:hover {
+  background: rgba(255,255,255,0.2);
+  padding-left: 30px;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 12px 15px;
+  }
+
+  .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: #333;
+  }
 }
