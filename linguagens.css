@@ -1,29 +1,28 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: rgba(62, 57, 25, 1);
+  background-color: rgba(75, 21, 53, 1);
   color: #faebcc;
   margin: 0;
 }
 
-.header-container-natureza {
+.header-container-linguagens {
   position: relative;
   min-height: 400px;
   overflow: hidden;
 }
 
-.header-background-natureza {
+.header-background-linguagens {
   position: relative;
 }
 
-.header-background-natureza img {
+.header-background-linguagens img {
   width: 100%;
   height: 420px;
   object-fit: cover;
   opacity: 0.55;
-  display: block;
 }
 
-.header-background-natureza::after {
+.header-background-linguagens::after {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -32,30 +31,31 @@ body {
   height: 160px;
 
   background: linear-gradient(to bottom,
-      rgba(62, 57, 25, 0) 0%,
-      rgba(62, 57, 25, 0.6) 60%,
-      rgba(62, 57, 25, 1) 100%);
+      rgba(75, 21, 53, 0) 0%,
+      rgba(75, 21, 53, 0.6) 60%,
+      rgba(75, 21, 53, 1) 100%);
 
   filter: blur(8px);
-  z-index: 3;
   pointer-events: none;
-}
-
-.header-natureza {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 5;
-  text-align: left;
-  width: 100%;
 }
 
-.header-natureza Menu {
+.header-linguagens {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  z-index: 6;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.header-linguagens Menu {
   font-family: 'Smooch', cursive;
   font-size: 120px;
   margin: 0;
   padding-left: 20px;
+  margin-top: 100px;
 }
 
 .titulo-secao h2,
@@ -68,7 +68,7 @@ body {
 .fundo-carta {
   margin-top: -5px;
   position: relative;
-  background-image: url("../fotos/fundonatureza.png");
+  background-image: url("fotos/fundolinguagens.png");
   background-size: cover;
   background-position: center;
   padding: 30px;
@@ -99,39 +99,41 @@ body {
   gap: 17px;
 }
 
-.foto-mapa-mental,
-.foto-poluicao,
-.foto-estequimoetria,
-.foto-biomoleculas,
-.foto-vacinas,
-.foto-glosssario,
-.foto-saude-coletiva,
-.foto-anaenergia,
-.foto-oleos,
-.foto-padletnat {
-  width: 400px;
-  height: 250px;
+/* Fotos */
+.foto-pai-contra-mae,
+.foto-biografia,
+.foto-revista-literaria,
+.foto-repertorio,
+.foto-redacao,
+.foto-padlet,
+.foto-que-tipo-de-arte,
+.foto-carta-intencao,
+.foto-salim {
+  width: 300px;
+  height: 150px;
   object-fit: cover;
-  border: 10px solid rgba(62, 57, 25, 1);
+  border: 10px solid rgba(75, 21, 53, 1);
   display: block;
   margin: 0;
   transition: 0.3s;
 }
 
-.foto-mapa-mental:hover,
-.foto-poluicao:hover,
-.foto-estequimoetria:hover,
-.foto-biomoleculas:hover,
-.foto-vacinas:hover,
-.foto-glosssario:hover,
-.foto-saude-coletiva:hover,
-.foto-anaenergia:hover,
-.foto-oleos:hover,
-.foto-padletnat:hover {
+.foto-pai-contra-mae:hover,
+.foto-biografia:hover,
+.foto-revista-literaria:hover,
+.foto-repertorio:hover,
+.foto-redacao:hover,
+.foto-padlet:hover,
+.foto-que-tipo-de-arte:hover,
+.foto-carta-intencao:hover,
+.foto-salim:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
+
+
+/* Botões */
 .botoes-alinhados {
   display: flex;
   align-items: center;
@@ -148,17 +150,17 @@ body {
   line-height: 1;
 }
 
-.botao-mapamental,
-.poluicao,
-.Estequiometria,
-.atividade-de-escolha,
-.botao-vacinas,
-.glossario,
-.saude-coletiva,
-.botao-anaenergia,
-.extracaodeoleos,
-.padlet-natureza {
-  background-color: rgba(62, 57, 25, 1);
+/* Botões principais */
+.botao-pai-contra-mae,
+.botao-revista-literaria,
+.botao-biografia,
+.botao-repertorio,
+.botao-redacao,
+.botao-padlet,
+.botao-tipos-de-arte,
+.botao-salim,
+.botao-carta-intencao {
+  background-color: rgba(75, 21, 53, 1);
   color: #faebcc;
   padding: 10px 20px;
   text-decoration: none;
@@ -170,18 +172,19 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-.botao-mapamental::before,
-.poluicao::before,
-.Estequiometria::before,
-.atividade-de-escolha::before,
-.botao-vacinas::before,
-.glossario::before,
-.saude-coletiva::before,
-.botao-anaenergia::before,
-.extracaodeoleos::before,
-.padlet-natureza::before {
+.botao-padlet::before,
+.botao-redacao::before,
+.botao-repertorio::before,
+.botao-biografia::before,
+.botao-revista-literaria::before,
+.botao-pai-contra-mae::before,
+.botao-tipos-de-arte::before,
+.botao-tipos-de-arte::before,
+.botao-salim::before,
+.botao-carta-intencao::before {
   content: "";
   position: absolute;
+  top: 0;
   left: -65%;
   width: 50%;
   height: 100%;
@@ -189,16 +192,16 @@ body {
   transform: skewX(-25deg);
 }
 
-.botao-mapamental:hover::before,
-.poluicao:hover::before,
-.Estequiometria:hover::before,
-.atividade-de-escolha:hover::before,
-.botao-vacinas:hover::before,
-.glossario:hover::before,
-.saude-coletiva:hover::before,
-.botao-anaenergia:hover::before,
-.extracaodeoleos:hover::before,
-.padlet-natureza:hover::before {
+.botao-padlet:hover::before,
+.botao-redacao:hover::before,
+.botao-repertorio:hover::before,
+.botao-biografia:hover::before,
+.botao-revista-literaria:hover::before,
+.botao-pai-contra-mae:hover::before,
+.botao-tipos-de-arte:hover::before,
+.botao-tipos-de-arte:hover::before,
+.botao-salim:hover::before,
+.botao-carta-intencao:hover::before {
   left: 125%;
   transition: left 0.5s;
 }
@@ -212,7 +215,7 @@ body {
 
 .botao-voltar a {
   background-color: #faebcc;
-  color: rgba(62, 57, 25, 1);
+  color: rgba(75, 21, 53, 1);
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
@@ -229,16 +232,16 @@ body {
   left: -65%;
   width: 50%;
   height: 100%;
-  background: rgba(62, 57, 25, 1);
+  background: rgba(75, 21, 53, 1);
   transform: skewX(-25deg);
 }
 
 .botao-voltar a:hover::before {
   left: 125%;
-  transition: left 0.5s;
+  transition: left 0.4s;
 }
 
-/* Modais */
+/*Modais */
 .modal {
   display: none;
   position: fixed;
@@ -253,7 +256,7 @@ body {
 }
 
 .modal-conteudo {
-  background-color: rgba(62, 57, 25, 1);
+  background-color: rgba(75, 21, 53, 1);
   color: #faebcc;
   padding: 20px;
   border: 1px solid #faebcc;
@@ -284,7 +287,7 @@ body {
   align-items: center;
   padding: 15px 40px;
   position: fixed;
-  background: rgba(62, 57, 25, 1);
+  background: rgba(75, 21, 53, 1);
   color: #faebcc;
   top: 0;
   left: 0;
@@ -326,7 +329,7 @@ body {
   position: static;
   top: 100%;
   left: 0;
-  background: rgba(62, 57, 25, 1);
+  background: rgba(75, 21, 53, 1);
   list-style: none;
   padding: 10px 0;
   border-radius: 6px;
@@ -392,7 +395,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(5px);
-    background: rgba(62, 57, 25, 1);
+    background: rgba(75, 21, 53, 1);
     transition: 
       max-height 0.3s ease,
       opacity 0.2s ease,
@@ -416,7 +419,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(62, 57, 25, 1);
+    background: rgba(75, 21, 53, 1);
     list-style: none;
     padding: 10px 0;
     border-radius: 6px;

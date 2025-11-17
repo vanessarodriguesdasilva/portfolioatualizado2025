@@ -1,48 +1,47 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: rgba(75, 52, 29, 1);
+  background-color: #462028;
   color: #faebcc;
   margin: 0;
-  width: 100%;
+  padding-top: 80px;
 }
 
-.header-container-humanas {
+.header-container {
   position: relative;
   min-height: 400px;
   overflow: hidden;
 }
 
-.header-background-humanas {
+.header-background {
   position: relative;
 }
 
-.header-background-humanas img {
+.header-background img {
   width: 100%;
   height: 420px;
   object-fit: cover;
-  opacity: 0.55;
   display: block;
 }
 
-.header-background-humanas::after {
+.header-background::after {
   content: "";
   position: absolute;
   bottom: -15px;
   left: 0;
   width: 100%;
-  height: 160px;
+  height: 500px;
 
   background: linear-gradient(to bottom,
-      rgba(75, 52, 29, 0) 0%,
-      rgba(75, 52, 29, 0.6) 60%,
-      rgba(75, 52, 29, 1) 100%);
+      rgba(70, 32, 40, 0) 0%,
+      rgba(70, 32, 40, 0.6) 60%,
+      rgba(70, 32, 40, 1) 100%);
 
   filter: blur(8px);
   z-index: 3;
   pointer-events: none;
 }
 
-.header-humanas {
+.header {
   position: absolute;
   top: 70%;
   left: 50%;
@@ -50,30 +49,49 @@ body {
   width: 100%;
   transform: translate(-50%, -50%);
   text-align: left;
-}
-
-.header-humanas Menu {
   font-family: 'Smooch', cursive;
   font-size: 120px;
-  margin: 0;
-  padding-left: 20px;
-  margin-top: 100px;
 }
 
-.titulo-secao h2,
-.titulo-secao-2tri h2,
-.titulo-secao-3tri h2 {
-  margin-left: 40px;
+.apresentacao-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.texto_apresentacao {
+  max-width: 700px;
+  padding: 10px 20px;
+  background-color: #faebcc;
+  font-size: 17px;
   font-family: 'B612', sans-serif;
+  color: #343625;
+  border: 10px solid #462028;
+}
+
+.my-image {
+  width: 280px;
+  height: 350px;
+  border: 10px solid #462028;
+  margin-left: 25px;
 }
 
 .fundo-carta {
   margin-top: -5px;
   position: relative;
-  background-image: url("../fotos/fundohumanas.png");
+  background-image: url("fotos/fundoinicio.png");
   background-size: cover;
   background-position: center;
   padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .fundo-carta::before {
@@ -82,105 +100,60 @@ body {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
+  pointer-events: none;
 }
 
-.bloco-atividade,
-.bloco-atividade-2tri {
+h2 {
+  margin-left: 40px;
+}
+
+.portfolios-anteriores {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  width: 100%;
+  max-width: 1200px;
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  padding: 30px;
 }
 
-.atividade-card {
+.portfolio-card {
   display: flex;
   flex-direction: column;
+  gap: 12px;
   align-items: center;
-  gap: 17px;
 }
 
-.foto-guerra-do-opio,
-.foto-quiz,
-.foto-geopolitica,
-.foto-2guerra-mundial,
-.foto-totalitarismo,
-.foto-republica,
-.foto-capital,
-.foto-getulio,
-.foto-21anos {
+.foto-portfolio-1ano img,
+.foto-portfolio-2ano img {
   width: 400px;
   height: 250px;
   object-fit: cover;
-  border: 10px solid rgba(75, 52, 29, 1);
-  display: block;
-  margin: 0;
+  border: 10px solid #462028;
   transition: 0.3s;
 }
 
-.foto-guerra-do-opio:hover,
-.foto-quiz:hover,
-.foto-geopolitica:hover,
-.foto-2guerra-mundial:hover,
-.foto-totalitarismo:hover,
-.foto-republica:hover,
-.foto-capital:hover,
-.foto-getulio:hover,
-.foto-21anos:hover {
+.foto-portfolio-1ano img:hover,
+.foto-portfolio-2ano img:hover {
   transform: scale(1.1);
-  cursor: pointer;
 }
 
-.botoes-alinhados {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.icone-modal {
-  background: none;
-  border: none;
+.botao-1anoportfas,
+.botao-2anoportfas {
+  background-color: #462028;
   color: #faebcc;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 0;
-  line-height: 1;
-}
-
-.botao-guerra-do-opio,
-.botao-quiz,
-.botao-geopolitica,
-.botao-2guerra,
-.botao-totalitarismo,
-.botao-republica,
-.botao-capital,
-.botao-getulio,
-.botao-21anos {
-  background-color: rgba(75, 52, 29, 1);
-  color: #faebcc;
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-decoration: none;
   font-weight: bold;
   position: relative;
   overflow: hidden;
-  display: inline-block;
-  border: none;
-  font-family: 'Arial', sans-serif;
 }
 
-.botao-guerra-do-opio::before,
-.botao-quiz::before,
-.botao-geopolitica::before,
-.botao-2guerra::before,
-.botao-totalitarismo::before,
-.botao-republica::before,
-.botao-capital::before,
-.botao-getulio::before,
-.botao-21anos::before {
+.botao-1anoportfas::before,
+.botao-2anoportfas::before {
   content: "";
   position: absolute;
+  top: 0;
   left: -65%;
   width: 50%;
   height: 100%;
@@ -188,90 +161,56 @@ body {
   transform: skewX(-25deg);
 }
 
-.botao-guerra-do-opio:hover::before,
-.botao-quiz:hover::before,
-.botao-geopolitica:hover::before,
-.botao-2guerra:hover::before,
-.botao-totalitarismo:hover::before,
-.botao-republica:hover::before,
-.botao-capital:hover::before,
-.botao-getulio:hover::before,
-.botao-21anos:hover::before {
+.botao-1anoportfas:hover::before,
+.botao-2anoportfas:hover::before {
   left: 125%;
   transition: left 0.5s;
 }
 
-.botao-voltar {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+@media (max-width: 900px) {
+  .portfolios-anteriores {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .foto-portfolio-1ano img,
+  .foto-portfolio-2ano img {
+    width: 320px;
+    height: 200px;
+  }
 }
 
-.botao-voltar a {
-  background-color: #faebcc;
-  color: rgba(75, 52, 29, 1);
+.botao-materia {
+  background-color: #462028;
+  color: #faebcc;
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
   position: relative;
   overflow: hidden;
-  display: inline-block;
-  border: none;
 }
 
-.botao-voltar a::before {
+.botao-materia::before {
   content: "";
   position: absolute;
   top: 0;
   left: -65%;
   width: 50%;
   height: 100%;
-  background: rgba(75, 52, 29, 1);
+  background: #faebcc;
   transform: skewX(-25deg);
 }
 
-.botao-voltar a:hover::before {
+.botao-materia:hover::before {
   left: 125%;
   transition: left 0.5s;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-conteudo {
-  background-color: rgba(75, 52, 29, 1);
-  color: #faebcc;
-  padding: 20px;
-  border: 1px solid #faebcc;
-  width: 80%;
-  max-width: 500px;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.fechar {
-  color: #faebcc;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.fechar:hover,
-.fechar:focus {
-  color: #925a38;
-  text-decoration: none;
-  cursor: pointer;
+@media (max-width: 600px) {
+  .botao-materia {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /*Navbar*/
@@ -281,7 +220,7 @@ body {
   align-items: center;
   padding: 15px 40px;
   position: fixed;
-  background: rgba(75, 52, 29, 1);
+  background: #462028;
   color: #faebcc;
   top: 0;
   left: 0;
@@ -323,7 +262,7 @@ body {
   position: static;
   top: 100%;
   left: 0;
-  background: rgba(75, 52, 29, 1);
+  background: #462028;
   list-style: none;
   padding: 10px 0;
   border-radius: 6px;
@@ -389,7 +328,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(5px);
-    background: rgba(75, 52, 29, 1);
+    background: #462028;
     transition: 
       max-height 0.3s ease,
       opacity 0.2s ease,
@@ -413,7 +352,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(75, 52, 29, 1);
+    background: #462028;
     list-style: none;
     padding: 10px 0;
     border-radius: 6px;
@@ -431,5 +370,3 @@ body {
     transform: translateY(0);
   }
 }
-
-

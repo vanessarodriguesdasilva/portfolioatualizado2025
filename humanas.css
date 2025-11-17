@@ -1,28 +1,30 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: rgba(75, 21, 53, 1);
+  background-color: rgba(75, 52, 29, 1);
   color: #faebcc;
   margin: 0;
+  width: 100%;
 }
 
-.header-container-linguagens {
+.header-container-humanas {
   position: relative;
   min-height: 400px;
   overflow: hidden;
 }
 
-.header-background-linguagens {
+.header-background-humanas {
   position: relative;
 }
 
-.header-background-linguagens img {
+.header-background-humanas img {
   width: 100%;
   height: 420px;
   object-fit: cover;
   opacity: 0.55;
+  display: block;
 }
 
-.header-background-linguagens::after {
+.header-background-humanas::after {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -31,26 +33,26 @@ body {
   height: 160px;
 
   background: linear-gradient(to bottom,
-      rgba(75, 21, 53, 0) 0%,
-      rgba(75, 21, 53, 0.6) 60%,
-      rgba(75, 21, 53, 1) 100%);
+      rgba(75, 52, 29, 0) 0%,
+      rgba(75, 52, 29, 0.6) 60%,
+      rgba(75, 52, 29, 1) 100%);
 
   filter: blur(8px);
+  z-index: 3;
   pointer-events: none;
-  z-index: 5;
 }
 
-.header-linguagens {
+.header-humanas {
   position: absolute;
   top: 70%;
   left: 50%;
-  z-index: 6;
+  z-index: 5;
   width: 100%;
   transform: translate(-50%, -50%);
   text-align: left;
 }
 
-.header-linguagens Menu {
+.header-humanas Menu {
   font-family: 'Smooch', cursive;
   font-size: 120px;
   margin: 0;
@@ -68,7 +70,7 @@ body {
 .fundo-carta {
   margin-top: -5px;
   position: relative;
-  background-image: url("../fotos/fundolinguagens.png");
+  background-image: url("fotos/fundohumanas.png");
   background-size: cover;
   background-position: center;
   padding: 30px;
@@ -82,7 +84,8 @@ body {
   z-index: 0;
 }
 
-.bloco-atividade {
+.bloco-atividade,
+.bloco-atividade-2tri {
   position: relative;
   z-index: 1;
   display: flex;
@@ -99,41 +102,37 @@ body {
   gap: 17px;
 }
 
-/* Fotos */
-.foto-pai-contra-mae,
-.foto-biografia,
-.foto-revista-literaria,
-.foto-repertorio,
-.foto-redacao,
-.foto-padlet,
-.foto-que-tipo-de-arte,
-.foto-carta-intencao,
-.foto-salim {
-  width: 300px;
-  height: 150px;
+.foto-guerra-do-opio,
+.foto-quiz,
+.foto-geopolitica,
+.foto-2guerra-mundial,
+.foto-totalitarismo,
+.foto-republica,
+.foto-capital,
+.foto-getulio,
+.foto-21anos {
+  width: 400px;
+  height: 250px;
   object-fit: cover;
-  border: 10px solid rgba(75, 21, 53, 1);
+  border: 10px solid rgba(75, 52, 29, 1);
   display: block;
   margin: 0;
   transition: 0.3s;
 }
 
-.foto-pai-contra-mae:hover,
-.foto-biografia:hover,
-.foto-revista-literaria:hover,
-.foto-repertorio:hover,
-.foto-redacao:hover,
-.foto-padlet:hover,
-.foto-que-tipo-de-arte:hover,
-.foto-carta-intencao:hover,
-.foto-salim:hover {
+.foto-guerra-do-opio:hover,
+.foto-quiz:hover,
+.foto-geopolitica:hover,
+.foto-2guerra-mundial:hover,
+.foto-totalitarismo:hover,
+.foto-republica:hover,
+.foto-capital:hover,
+.foto-getulio:hover,
+.foto-21anos:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-
-
-/* Botões */
 .botoes-alinhados {
   display: flex;
   align-items: center;
@@ -150,17 +149,16 @@ body {
   line-height: 1;
 }
 
-/* Botões principais */
-.botao-pai-contra-mae,
-.botao-revista-literaria,
-.botao-biografia,
-.botao-repertorio,
-.botao-redacao,
-.botao-padlet,
-.botao-tipos-de-arte,
-.botao-salim,
-.botao-carta-intencao {
-  background-color: rgba(75, 21, 53, 1);
+.botao-guerra-do-opio,
+.botao-quiz,
+.botao-geopolitica,
+.botao-2guerra,
+.botao-totalitarismo,
+.botao-republica,
+.botao-capital,
+.botao-getulio,
+.botao-21anos {
+  background-color: rgba(75, 52, 29, 1);
   color: #faebcc;
   padding: 10px 20px;
   text-decoration: none;
@@ -172,19 +170,17 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-.botao-padlet::before,
-.botao-redacao::before,
-.botao-repertorio::before,
-.botao-biografia::before,
-.botao-revista-literaria::before,
-.botao-pai-contra-mae::before,
-.botao-tipos-de-arte::before,
-.botao-tipos-de-arte::before,
-.botao-salim::before,
-.botao-carta-intencao::before {
+.botao-guerra-do-opio::before,
+.botao-quiz::before,
+.botao-geopolitica::before,
+.botao-2guerra::before,
+.botao-totalitarismo::before,
+.botao-republica::before,
+.botao-capital::before,
+.botao-getulio::before,
+.botao-21anos::before {
   content: "";
   position: absolute;
-  top: 0;
   left: -65%;
   width: 50%;
   height: 100%;
@@ -192,16 +188,15 @@ body {
   transform: skewX(-25deg);
 }
 
-.botao-padlet:hover::before,
-.botao-redacao:hover::before,
-.botao-repertorio:hover::before,
-.botao-biografia:hover::before,
-.botao-revista-literaria:hover::before,
-.botao-pai-contra-mae:hover::before,
-.botao-tipos-de-arte:hover::before,
-.botao-tipos-de-arte:hover::before,
-.botao-salim:hover::before,
-.botao-carta-intencao:hover::before {
+.botao-guerra-do-opio:hover::before,
+.botao-quiz:hover::before,
+.botao-geopolitica:hover::before,
+.botao-2guerra:hover::before,
+.botao-totalitarismo:hover::before,
+.botao-republica:hover::before,
+.botao-capital:hover::before,
+.botao-getulio:hover::before,
+.botao-21anos:hover::before {
   left: 125%;
   transition: left 0.5s;
 }
@@ -215,7 +210,7 @@ body {
 
 .botao-voltar a {
   background-color: #faebcc;
-  color: rgba(75, 21, 53, 1);
+  color: rgba(75, 52, 29, 1);
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
@@ -232,16 +227,15 @@ body {
   left: -65%;
   width: 50%;
   height: 100%;
-  background: rgba(75, 21, 53, 1);
+  background: rgba(75, 52, 29, 1);
   transform: skewX(-25deg);
 }
 
 .botao-voltar a:hover::before {
   left: 125%;
-  transition: left 0.4s;
+  transition: left 0.5s;
 }
 
-/*Modais */
 .modal {
   display: none;
   position: fixed;
@@ -256,7 +250,7 @@ body {
 }
 
 .modal-conteudo {
-  background-color: rgba(75, 21, 53, 1);
+  background-color: rgba(75, 52, 29, 1);
   color: #faebcc;
   padding: 20px;
   border: 1px solid #faebcc;
@@ -287,7 +281,7 @@ body {
   align-items: center;
   padding: 15px 40px;
   position: fixed;
-  background: rgba(75, 21, 53, 1);
+  background: rgba(75, 52, 29, 1);
   color: #faebcc;
   top: 0;
   left: 0;
@@ -329,7 +323,7 @@ body {
   position: static;
   top: 100%;
   left: 0;
-  background: rgba(75, 21, 53, 1);
+  background: rgba(75, 52, 29, 1);
   list-style: none;
   padding: 10px 0;
   border-radius: 6px;
@@ -395,7 +389,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(5px);
-    background: rgba(75, 21, 53, 1);
+    background: rgba(75, 52, 29, 1);
     transition: 
       max-height 0.3s ease,
       opacity 0.2s ease,
@@ -419,7 +413,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(75, 21, 53, 1);
+    background: rgba(75, 52, 29, 1);
     list-style: none;
     padding: 10px 0;
     border-radius: 6px;
@@ -437,3 +431,5 @@ body {
     transform: translateY(0);
   }
 }
+
+
