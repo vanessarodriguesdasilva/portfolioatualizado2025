@@ -3,6 +3,7 @@ body {
   background-color: rgba(75, 52, 29, 1);
   color: #faebcc;
   margin: 0;
+  width: 100%;
 }
 
 .header-container-humanas {
@@ -284,9 +285,10 @@ body {
   color: #faebcc;
   top: 0;
   left: 0;
-  width: 95%;
+  width: 100%;
   z-index: 9999;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
 .logo {
@@ -318,7 +320,7 @@ body {
 }
 
 .submenu {
-  position: absolute;
+  position: static;
   top: 100%;
   left: 0;
   background: rgba(75, 52, 29, 1);
@@ -353,28 +355,81 @@ body {
   padding-left: 30px;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
+
   .nav {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    padding: 15px;
   }
 
   .nav-links {
     flex-direction: column;
     width: 100%;
-    padding-top: 10px;
+    gap: 5px;
+  }
+
+  .nav-links li {
+    width: 100%;
+    list-style: none;
   }
 
   .nav-links a {
-    padding: 12px 15px;
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
   }
 
+  /* SUBMENU – fechado sem ocupar espaço */
   .submenu {
-    position: static;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    background: rgba(75, 52, 29, 1);
+    transition: 
+      max-height 0.3s ease,
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  /* SUBMENU – quando toca no botão */
+  .dropdown:active > .submenu,
+  .dropdown:focus-within > .submenu { 
+    max-height: 500px; 
     opacity: 1;
     visibility: visible;
-    transform: none;
-    box-shadow: none;
-    background: #333;
+    transform: translateY(0);
   }
 }
+
+/* DESKTOP */
+@media (min-width: 769px) {
+
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(75, 52, 29, 1);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+  }
+
+  /* Hover só no desktop */
+  .dropdown:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+
