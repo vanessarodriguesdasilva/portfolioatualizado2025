@@ -26,10 +26,10 @@ body {
 .header-background-tecnico::after {
     content: "";
     position: absolute;
-    bottom: -1px;
+    bottom: -51px;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 160px;
 
     background: linear-gradient(to bottom,
             rgba(57, 31, 18, 0) 0%,
@@ -99,7 +99,6 @@ body {
     gap: 17px;
 }
 
-/* imagens */
 .foto-sa,
 .foto-planilha,
 .foto-exercicio,
@@ -176,8 +175,6 @@ body {
     transition: left 0.5s;
 }
 
-/* ========================= BOTÃO VOLTAR ========================= */
-
 .botao-voltar {
     display: flex;
     justify-content: center;
@@ -213,7 +210,7 @@ body {
     transition: left 0.5s;
 }
 
-/* ========================= MODAIS ========================= */
+/*modasi*/
 
 .modal {
     display: none;
@@ -253,8 +250,7 @@ body {
     cursor: pointer;
 }
 
-/* ========================= NAVBAR ========================= */
-
+/* navbar */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -334,8 +330,6 @@ body {
     background: rgba(255, 255, 255, 0.2);
     padding-left: 30px;
 }
-
-/* ==================== RESPONSIVIDADE MENU ==================== */
 
 @media (max-width: 768px) {
     .nav {

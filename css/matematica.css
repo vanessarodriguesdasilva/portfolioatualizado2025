@@ -1,4 +1,3 @@
-/* ==================== GERAL ==================== */
 body {
   font-family: 'Arial', sans-serif;
   background-color: rgba(36, 51, 76, 1);
@@ -6,19 +5,16 @@ body {
   margin: 0;
 }
 
-/* ==================== HEADER MATEMÁTICA ==================== */
 .header-container-matematica {
   position: relative;
   min-height: 400px;
   overflow: hidden;
-  /* necessário para esconder o fade */
 }
 
 .header-background-matematica {
   position: relative;
 }
 
-/* Imagem / GIF do topo */
 .header-background-matematica img {
   width: 100%;
   height: 420px;
@@ -30,10 +26,10 @@ body {
 .header-background-matematica::after {
   content: "";
   position: absolute;
-  bottom: -1px;
+  bottom: -15px;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 160px;
 
   background: linear-gradient(to bottom,
       rgba(36, 51, 76, 0) 0%,
@@ -45,7 +41,6 @@ body {
   pointer-events: none;
 }
 
-/* Texto por cima da imagem */
 .header-matematica {
   position: absolute;
   top: 70%;
@@ -64,7 +59,6 @@ body {
   margin-top: 100px;
 }
 
-/* ==================== SEÇÕES ==================== */
 .titulo-secao h2,
 .titulo-secao-2tri h2,
 .titulo-secao-3tri h2 {
@@ -72,7 +66,6 @@ body {
   font-family: 'B612', sans-serif;
 }
 
-/* Fundo com imagem */
 .fundo-carta {
   margin-top: -5px;
   position: relative;
@@ -90,7 +83,6 @@ body {
   z-index: 0;
 }
 
-/* ==================== BLOCOS DE ATIVIDADES ==================== */
 .bloco-atividade,
 .bloco-atividade-2tri,
 .bloco-atividade-3tri {
@@ -103,7 +95,6 @@ body {
   padding: 30px;
 }
 
-/* Cartões */
 .atividade-card,
 .atividade-card-2tri,
 .atividade-card-3tri {
@@ -113,7 +104,6 @@ body {
   gap: 17px;
 }
 
-/* Fotos */
 .foto-jogo,
 .foto-filme,
 .foto-passe-2tri,
@@ -137,7 +127,6 @@ body {
   cursor: pointer;
 }
 
-/*BOTÕES*/
 .botoes-alinhados {
   display: flex;
   align-items: center;
@@ -195,7 +184,6 @@ body {
   transition: left 0.5s;
 }
 
-/* Botão voltar */
 .botao-voltar {
   display: flex;
   justify-content: center;
@@ -231,7 +219,7 @@ body {
   transition: left 0.5s;
 }
 
-/* ==================== MODAIS ==================== */
+/*modais*/
 .modal {
   display: none;
   position: fixed;
@@ -270,7 +258,7 @@ body {
   cursor: pointer;
 }
 
-/* ==================== NAVBAR ==================== */
+/*navbar*/
 .nav {
   display: flex;
   justify-content: space-between;
@@ -310,7 +298,6 @@ body {
   border-radius: 5px;
 }
 
-/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -352,7 +339,6 @@ body {
   padding-left: 30px;
 }
 
-/* ==================== RESPONSIVIDADE ==================== */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;

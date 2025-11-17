@@ -43,10 +43,10 @@ body {
 .header-background-atividades::after {
   content: "";
   position: absolute;
-  bottom: -1px;
+  bottom: -15px;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 160px;
 
   background: linear-gradient(to bottom,
       rgba(70, 32, 40, 0) 0%,

@@ -9,7 +9,6 @@ body {
   position: relative;
   min-height: 400px;
   overflow: hidden;
-  /* necessário para esconder o fade */
 }
 
 .header-background-humanas {
@@ -27,10 +26,10 @@ body {
 .header-background-humanas::after {
   content: "";
   position: absolute;
-  bottom: -1px;
+  bottom: -15px;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 160px;
 
   background: linear-gradient(to bottom,
       rgba(75, 52, 29, 0) 0%,
@@ -280,9 +279,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
+  position: fixed;
   background: rgba(75, 52, 29, 1);
   color: #faebcc;
-  position: fixed;
   top: 0;
   left: 0;
   width: 95%;
@@ -327,7 +326,6 @@ body {
   padding: 10px 0;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -355,8 +353,6 @@ body {
   padding-left: 30px;
 }
 
-/*
-   RESPONSIVIDADE*/
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;

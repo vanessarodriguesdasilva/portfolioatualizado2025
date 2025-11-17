@@ -5,21 +5,16 @@ body {
   margin: 0;
 }
 
-/* Estilos do cabeçalho de Natureza */
-/* ======== HEADER NATUREZA — GRADIENTE + BLUR ======== */
-
 .header-container-natureza {
   position: relative;
   min-height: 400px;
   overflow: hidden;
-  /* Esconde o fade */
 }
 
 .header-background-natureza {
   position: relative;
 }
 
-/* A imagem do topo (GIF ou imagem) */
 .header-background-natureza img {
   width: 100%;
   height: 420px;
@@ -28,14 +23,13 @@ body {
   display: block;
 }
 
-/* Gradiente + blur entre o topo e o fundo da página */
 .header-background-natureza::after {
   content: "";
   position: absolute;
-  bottom: -1px;
+  bottom: -15px;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 160px;
 
   background: linear-gradient(to bottom,
       rgba(62, 57, 25, 0) 0%,
@@ -47,7 +41,6 @@ body {
   pointer-events: none;
 }
 
-/* Título sobre a imagem */
 .header-natureza {
   position: absolute;
   bottom: 30px;
@@ -58,7 +51,6 @@ body {
   width: 100%;
 }
 
-/* Título propriamente dito */
 .header-natureza Menu {
   font-family: 'Smooch', cursive;
   font-size: 120px;
@@ -66,8 +58,6 @@ body {
   padding-left: 20px;
 }
 
-
-/* Estilos da seção de atividades */
 .titulo-secao h2,
 .titulo-secao-2tri h2,
 .titulo-secao-3tri h2 {
@@ -92,7 +82,6 @@ body {
   z-index: 0;
 }
 
-/* Estilos dos blocos de atividade */
 .bloco-atividade {
   position: relative;
   z-index: 1;
@@ -110,7 +99,6 @@ body {
   gap: 17px;
 }
 
-/* Estilos das imagens específicas de Natureza */
 .foto-mapa-mental,
 .foto-poluicao,
 .foto-estequimoetria,
@@ -250,7 +238,7 @@ body {
   transition: left 0.5s;
 }
 
-/* Estilos dos modais */
+/* Modais */
 .modal {
   display: none;
   position: fixed;
@@ -370,7 +358,6 @@ body {
   padding-left: 30px;
 }
 
-/* ==================== RESPONSIVIDADE MENU ==================== */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;

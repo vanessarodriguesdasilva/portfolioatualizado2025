@@ -1,21 +1,17 @@
-/* ==================== RESET E BASE ==================== */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #462028;
   color: #faebcc;
   margin: 0;
   padding-top: 80px;
-  /* espaço para a navbar fixa */
 }
 
 .header-container {
   position: relative;
   min-height: 400px;
   overflow: hidden;
-  /* importante para o blur */
 }
 
-/* FUNDO DO HEADER */
 .header-background {
   position: relative;
 }
@@ -27,14 +23,13 @@ body {
   display: block;
 }
 
-/* GRADIENTE + BLUR IGUAL AO DO OUTRO CSS */
 .header-background::after {
   content: "";
   position: absolute;
-  bottom: -1px;
+  bottom: -15px;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 500px;
 
   background: linear-gradient(to bottom,
       rgba(70, 32, 40, 0) 0%,
@@ -46,7 +41,6 @@ body {
   pointer-events: none;
 }
 
-/* TEXTO EM CIMA DO GIF */
 .header {
   position: absolute;
   top: 70%;
@@ -59,7 +53,6 @@ body {
   font-size: 120px;
 }
 
-/* ==================== APRESENTAÇÃO ==================== */
 .apresentacao-container {
   display: flex;
   align-items: center;
@@ -88,7 +81,6 @@ body {
   margin-left: 25px;
 }
 
-/* ==================== FUNDOS ==================== */
 .fundo-carta {
   margin-top: -5px;
   position: relative;
@@ -115,7 +107,6 @@ h2 {
   margin-left: 40px;
 }
 
-/* ==================== PORTFÓLIOS ==================== */
 .portfolios-anteriores {
   display: flex;
   justify-content: center;
@@ -176,7 +167,6 @@ h2 {
   transition: left 0.5s;
 }
 
-/* Responsivo portfólios */
 @media (max-width: 900px) {
   .portfolios-anteriores {
     flex-direction: column;
@@ -223,7 +213,7 @@ h2 {
   }
 }
 
-/* ==================== NAVBAR ==================== */
+/* navbar*/
 .nav {
   display: flex;
   justify-content: space-between;
@@ -263,7 +253,6 @@ h2 {
   border-radius: 5px;
 }
 
-/* ========== DROPDOWN ========== */
 .dropdown {
   position: relative;
 }
@@ -305,7 +294,6 @@ h2 {
   padding-left: 30px;
 }
 
-/* ==================== RESPONSIVIDADE MENU ==================== */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
