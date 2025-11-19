@@ -3,6 +3,7 @@ body {
   background-color: rgba(36, 51, 76, 1);
   color: #faebcc;
   margin: 0;
+  padding-top: 80px;
 }
 
 .header-container-matematica {
@@ -29,7 +30,7 @@ body {
   bottom: -15px;
   left: 0;
   width: 100%;
-  height: 160px;
+  height: 500px;
 
   background: linear-gradient(to bottom,
       rgba(36, 51, 76, 0) 0%,
@@ -73,6 +74,10 @@ body {
   background-size: cover;
   background-position: center;
   padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .fundo-carta::before {
@@ -86,13 +91,13 @@ body {
 .bloco-atividade,
 .bloco-atividade-2tri,
 .bloco-atividade-3tri {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  width: 100%;
+  max-width: 1200px;
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  padding: 30px;
 }
 
 .atividade-card,
@@ -113,8 +118,6 @@ body {
   height: 250px;
   object-fit: cover;
   border: 10px solid rgba(36, 51, 76, 1);
-  display: block;
-  margin: 0;
   transition: 0.3s;
 }
 
@@ -150,14 +153,11 @@ body {
 .botao-BOLOMTM {
   background-color: rgba(36, 51, 76, 1);
   color: #faebcc;
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-decoration: none;
   font-weight: bold;
   position: relative;
   overflow: hidden;
-  display: inline-block;
-  border: none;
-  font-family: 'Arial', sans-serif;
 }
 
 .botao-criando::before,
@@ -182,6 +182,25 @@ body {
 .botao-BOLOMTM:hover::before {
   left: 125%;
   transition: left 0.5s;
+}
+
+@media (max-width: 900px) {
+
+  .bloco-atividade,
+  .bloco-atividade-2tri,
+  .bloco-atividade-3tri {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .foto-jogo,
+  .foto-filme,
+  .foto-passe-2tri,
+  .foto-form2tri,
+  .foto-BOLOMTM {
+    width: 320px;
+    height: 200px;
+  }
 }
 
 .botao-voltar {
@@ -374,16 +393,16 @@ body {
     visibility: hidden;
     transform: translateY(5px);
     background: rgba(36, 51, 76, 1);
-    transition: 
+    transition:
       max-height 0.3s ease,
       opacity 0.2s ease,
       transform 0.2s ease;
   }
 
   /* SUBMENU – quando toca no botão */
-  .dropdown:active > .submenu,
-  .dropdown:focus-within > .submenu { 
-    max-height: 500px; 
+  .dropdown:active>.submenu,
+  .dropdown:focus-within>.submenu {
+    max-height: 500px;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -401,7 +420,7 @@ body {
     list-style: none;
     padding: 10px 0;
     border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -409,7 +428,7 @@ body {
   }
 
   /* Hover só no desktop */
-  .dropdown:hover > .submenu {
+  .dropdown:hover>.submenu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
