@@ -59,8 +59,7 @@ body {
     margin-top: 100px;
 }
 
-.titulo-secao h2,
-.titulo-secao-2tri h2 {
+.titulo-secao h2 {
     margin-left: 40px;
     font-family: 'B612', sans-serif;
 }
@@ -102,7 +101,8 @@ body {
 .foto-sa,
 .foto-planilha,
 .foto-exercicio,
-.foto-figma-sa {
+.foto-figma-sa,
+.foto-crud {
     width: 400px;
     height: 250px;
     object-fit: cover;
@@ -115,7 +115,8 @@ body {
 .foto-sa:hover,
 .foto-planilha:hover,
 .foto-exercicio:hover,
-.foto-figma-sa:hover {
+.foto-figma-sa:hover
+.foto-crud:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -140,7 +141,8 @@ body {
 .botao-planilha,
 .botao-sa,
 .botao-exercicio,
-.botao-figma-sa {
+.botao-figma-sa,
+.botao-crud {
     background-color: rgba(57, 31, 18, 1);
     color: #faebcc;
     padding: 10px 20px;
@@ -156,7 +158,8 @@ body {
 .botao-planilha::before,
 .botao-sa::before,
 .botao-figma-sa::before,
-.botao-exercicio::before {
+.botao-exercicio::before,
+.botao-crud::before {
     content: "";
     position: absolute;
     top: 0;
@@ -170,7 +173,8 @@ body {
 .botao-planilha:hover::before,
 .botao-sa:hover::before,
 .botao-exercicio:hover::before,
-.botao-figma-sa:hover::before {
+.botao-figma-sa:hover::before,
+.botao-crud:hover::before {
     left: 125%;
     transition: left 0.5s;
 }
