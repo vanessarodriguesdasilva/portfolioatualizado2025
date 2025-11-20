@@ -101,13 +101,13 @@ body {
 
 .bloco-atividade,
 .bloco-atividade-2tri {
-  display: flex;
-  justify-content: center;
-  gap: 150px;
-  width: 100%;
-  max-width: 1200px;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px;
 }
 
 .atividade-card {
