@@ -3,6 +3,7 @@ body {
   background-color: rgba(62, 57, 25, 1);
   color: #faebcc;
   margin: 0;
+  padding-top: 80px;
 }
 
 .header-container-natureza {
@@ -29,7 +30,7 @@ body {
   bottom: -15px;
   left: 0;
   width: 100%;
-  height: 160px;
+  height: 500px;
 
   background: linear-gradient(to bottom,
       rgba(62, 57, 25, 0) 0%,
@@ -43,12 +44,12 @@ body {
 
 .header-natureza {
   position: absolute;
-  bottom: 30px;
+  top: 70%;
   left: 50%;
-  transform: translateX(-50%);
   z-index: 5;
-  text-align: left;
   width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: left;
 }
 
 .header-natureza Menu {
@@ -56,6 +57,18 @@ body {
   font-size: 120px;
   margin: 0;
   padding-left: 20px;
+  margin-top: 100px;
+}
+
+@media (max-width: 900px) {
+
+  .header-natureza Menu {
+    font-size: 80px;
+    margin: 0;
+    padding-left: 10px;
+    margin-top: 80px;
+  }
+
 }
 
 .titulo-secao h2,
@@ -72,6 +85,10 @@ body {
   background-size: cover;
   background-position: center;
   padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .fundo-carta::before {
@@ -83,13 +100,13 @@ body {
 }
 
 .bloco-atividade {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  width: 100%;
+  max-width: 1200px;
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  padding: 30px;
 }
 
 .atividade-card {
@@ -201,6 +218,30 @@ body {
 .padlet-natureza:hover::before {
   left: 125%;
   transition: left 0.5s;
+}
+
+@media (max-width: 900px) {
+
+  .bloco-atividade,
+  .bloco-atividade-2tri,
+  .bloco-atividade-3tri {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .foto-mapa-mental,
+  .foto-poluicao,
+  .foto-estequimoetria,
+  .foto-biomoleculas,
+  .foto-vacinas,
+  .foto-glosssario,
+  .foto-saude-coletiva,
+  .foto-anaenergia,
+  .foto-oleos,
+  .foto-padletnat {
+    width: 320px;
+    height: 200px;
+  }
 }
 
 .botao-voltar {
@@ -365,7 +406,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    padding: 15px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 1px;
+    position: absolute;
   }
 
   .nav-links {
@@ -382,7 +426,7 @@ body {
   .nav-links a {
     display: block;
     width: 100%;
-    padding: 12px 10px;
+    padding: 5px 5px;
   }
 
   /* SUBMENU – fechado sem ocupar espaço */
@@ -393,16 +437,16 @@ body {
     visibility: hidden;
     transform: translateY(5px);
     background: rgba(62, 57, 25, 1);
-    transition: 
+    transition:
       max-height 0.3s ease,
       opacity 0.2s ease,
       transform 0.2s ease;
   }
 
   /* SUBMENU – quando toca no botão */
-  .dropdown:active > .submenu,
-  .dropdown:focus-within > .submenu { 
-    max-height: 500px; 
+  .dropdown:active>.submenu,
+  .dropdown:focus-within>.submenu {
+    max-height: 500px;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -420,7 +464,7 @@ body {
     list-style: none;
     padding: 10px 0;
     border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -428,7 +472,7 @@ body {
   }
 
   /* Hover só no desktop */
-  .dropdown:hover > .submenu {
+  .dropdown:hover>.submenu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
