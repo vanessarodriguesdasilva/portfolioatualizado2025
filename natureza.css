@@ -195,6 +195,7 @@ body {
 .padlet-natureza::before {
   content: "";
   position: absolute;
+  top: 0;
   left: -65%;
   width: 50%;
   height: 100%;

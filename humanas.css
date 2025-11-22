@@ -30,7 +30,7 @@ body {
   bottom: -15px;
   left: 0;
   width: 100%;
-  height: 160px;
+  height: 500px;
 
   background: linear-gradient(to bottom,
       rgba(75, 52, 29, 0) 0%,
@@ -130,8 +130,6 @@ body {
   height: 250px;
   object-fit: cover;
   border: 10px solid rgba(75, 52, 29, 1);
-  display: block;
-  margin: 0;
   transition: 0.3s;
 }
 
@@ -180,9 +178,6 @@ body {
   font-weight: bold;
   position: relative;
   overflow: hidden;
-  display: inline-block;
-  border: none;
-  font-family: 'Arial', sans-serif;
 }
 
 .botao-guerra-do-opio::before,
@@ -196,6 +191,7 @@ body {
 .botao-21anos::before {
   content: "";
   position: absolute;
+  top: 0;
   left: -65%;
   width: 50%;
   height: 100%;

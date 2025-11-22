@@ -182,7 +182,7 @@ body {
   overflow: hidden;
   display: inline-block;
   border: none;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Arial', sans-serif; 
 }
 
 .botao-padlet::before,
